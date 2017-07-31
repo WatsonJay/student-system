@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{257D1BD8-2B42-4DE1-8D15-616332C10816}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryUI_rebuild</RootNamespace>
+    <AssemblyName>LibraryUI_rebuild</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>Z:\共享\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="ESBasic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ba1538489f75683e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\共享\素材\ESBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="OMCS">
+      <HintPath>Z:\共享\素材\OMCS.dll</HintPath>
+    </Reference>
+    <Reference Include="PaintFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ba1538489f75683e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\共享\素材\PaintFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db_libaryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_libaryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_libaryDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_libaryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_libaryDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_libaryDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UIbookadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIbookadd.Designer.cs">
+      <DependentUpon>UIbookadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIbookchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIbookchange.Designer.cs">
+      <DependentUpon>UIbookchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UICamare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UICamare.Designer.cs">
+      <DependentUpon>UICamare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db_libaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_libaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UIheadchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIheadchange.Designer.cs">
+      <DependentUpon>UIheadchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIlocalupload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIlocalupload.Designer.cs">
+      <DependentUpon>UIlocalupload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIlanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIlanding.Designer.cs">
+      <DependentUpon>UIlanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIuseradd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIuseradd.Designer.cs">
+      <DependentUpon>UIuseradd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIlogin.Designer.cs">
+      <DependentUpon>UIlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UImain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UImain.Designer.cs">
+      <DependentUpon>UImain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UIbookadd.resx">
+      <DependentUpon>UIbookadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIbookchange.resx">
+      <DependentUpon>UIbookchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UICamare.resx">
+      <DependentUpon>UICamare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIheadchange.resx">
+      <DependentUpon>UIheadchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIlocalupload.resx">
+      <DependentUpon>UIlocalupload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIlanding.resx">
+      <DependentUpon>UIlanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIuseradd.resx">
+      <DependentUpon>UIuseradd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIlogin.resx">
+      <DependentUpon>UIlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UImain.resx">
+      <DependentUpon>UImain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="db_libaryDataSet.xsc">
+      <DependentUpon>db_libaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_libaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_libaryDataSet.xss">
+      <DependentUpon>db_libaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet1.xsc">
+      <DependentUpon>db_libaryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_libaryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_libaryDataSet1.xss">
+      <DependentUpon>db_libaryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet2.xsc">
+      <DependentUpon>db_libaryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_libaryDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_libaryDataSet2.xss">
+      <DependentUpon>db_libaryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet3.xsc">
+      <DependentUpon>db_libaryDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db_libaryDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_libaryDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_libaryDataSet3.xss">
+      <DependentUpon>db_libaryDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryBLL\LibraryBLL.csproj">
+      <Project>{f85381b8-2edd-49a6-9d78-8ab8846b1101}</Project>
+      <Name>LibraryBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryModel\LibraryModel.csproj">
+      <Project>{03096ff6-d744-4908-b068-826940854225}</Project>
+      <Name>LibraryModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibrarySET\LibrarySET.csproj">
+      <Project>{e83f7660-fc7e-4ff5-8a10-295a437c9463}</Project>
+      <Name>LibrarySET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morningSCO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morningSCO_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPalace2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_inputbtn_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afternoonSCO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nightSCO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noonSCO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgRjp.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhuce_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_login_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mini_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_loginchange_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_loginchange_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_loginchange_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f5579e1effc00429c16ae78f31e499f6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2572e01fb2f2d6df34495c4d426b9365.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polaroid-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-2-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-card-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polaroid-2-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_set_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3db11210366998daacff2d9419348b70.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-gray1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afgxvxsdgfgf.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
